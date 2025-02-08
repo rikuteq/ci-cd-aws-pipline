@@ -12,7 +12,7 @@ export class CiCdAwsPiplineStack extends cdk.Stack {
     //GitHub token from AWS Secrets Manager
     const githubToken = SecretValue.secretsManager('github-token');
 
-    // The code that defines your stack goes here
+    
     const pipeline = new CodePipeline(this, 'CiCdAwsPiplinePipeline', {
       pipelineName: 'CiCdAwsPiplinePipeline',
       synth: new ShellStep('Synth', {
